@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="description" content="___">
+    
+    <title>Simple Weather App</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/app.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <section class="app-container">
+            <div class="app">
+                <div class="town-search">
+                    <form action="" class="choice">
+                        <input type="text" id="town-name" placeholder="Entrez le nom d'une ville">
+                        <button type="submit">
+                            <div class="search">
+                                <box-icon class="search-icon" name='search'></box-icon>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+                <div class="main-weather">
+                    <div class="app-icon">
+                        <img src="./images/app-icon.png" alt="#">
+                    </div>
+                    <div class="weather">
+                        <h1>24°C</h1>
+                        <h2>Ouagadougou</h2>
+                    </div>
+                </div>
+                <div class="other-weather">
+                    <div class="humidity">
+                        <div class="humidity-icon">
+                            <box-icon name='water'></box-icon>
+                            <div class="humidity-value">64%</div>
+                        </div>
+                    </div>
+                    <div class="wind-speed">
+                        <div class="wind-speed-icon">
+                            <box-icon name='wind'></box-icon>
+                            <div class="wind-speed-value">18 km/h</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+</body>
+</html>

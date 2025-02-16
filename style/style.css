@@ -1,0 +1,183 @@
+:root {
+    --primary-bg-color : rgba(255, 255, 255, 0.3);
+    --shadow-color : #232425;
+
+    --input-placeholder-color : rgb(48, 46, 46);
+    --input-bg-color : rgb(212, 208, 208);
+    --input-color : #000;
+
+    --search-hover-bg-color : #77b5fe;
+
+    --mobile-bg-color : #000
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    text-decoration: none;
+    list-style-type: none;
+
+    font-family: Quicksand;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/bg-img.jpg);
+    /* background-color: var(--mobile-bg-color); */
+    background-position: center;
+    background-size: cover;
+}
+
+.app {
+    width: 390px;
+    height: 535px;
+    padding: 1rem;
+    background-color: var(--primary-bg-color);
+    box-shadow: 10px 10px 20px var(--shadow-color);
+    border-radius: 1rem;
+}
+
+.town-search form{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.town-search input {
+    width: 75%;
+    height: 3.5rem;
+    padding: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--input-bg-color);
+    color: var(--input-color);
+    font-size: 1rem;
+
+    transition: all 0.4s ease;
+}
+
+.town-search input:hover {
+    background-color: var(--search-hover-bg-color);
+}
+
+.town-search input::placeholder {
+    color: var(--input-placeholder-color);
+}
+
+.main-weather {
+    height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    width: 5rem;
+    height: 3.5rem;
+
+    background-color: var(--input-bg-color);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.search:active {
+    background-color: var(--search-hover-bg-color);
+    transform: scale(1.2);
+}
+
+.app-icon img {
+    width: 200px;
+    height: 200px;
+}
+
+.weather {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.weather h1 {
+    font-size: 5rem;
+}
+
+.other-weather {
+    height: 76px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.humidity-icon, .wind-speed-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.humidity-value, .wind-speed-value {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width : 500px) {
+    .app-container {
+        background-color: var(--mobile-bg-color);
+        background-image: none;
+
+        box-shadow: 10px 10px 20px var(--mobile-bg-color);
+
+        transition: all 0.4s ease;
+    }
+
+    .town-search input:hover {
+        background-color: var(--input-bg-color);
+    }
+
+    .search {
+        box-shadow: 3px 3px 5px var(--shadow-color);
+        width: 4rem;
+        border-radius: 10px;
+        background-color: var(--search-hover-bg-color);
+
+        transition: all 0.4s ease;
+    }
+
+    .search:active {
+        transform: scale(1.2);
+    }
+}
